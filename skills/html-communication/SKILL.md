@@ -1,6 +1,6 @@
 ---
 name: html-communication
-description: When the user asks for an HTML writeup of work (NOT as part of the codebase), use this skill to create it.
+description: When the user asks for an HTML writeup of work (NOT as part of the codebase), use this skill to create it, or if they mention "HTML" with no additional context.
 ---
 
 # HTML Communication

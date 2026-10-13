@@ -28,6 +28,8 @@ Read enough of the repository to write facts instead of guesses:
 
 Identify the primary reader and the decision they came to make. They may be evaluating the project, trying it for the first time, integrating a package, learning an approach, or considering a contribution. Pick one primary path. Do not make every audience equally prominent.
 
+Choose a length target before drafting. For an ordinary app or tool, default to roughly 400 to 600 words; smaller utilities may need less. This is a planning target, not a universal cap. Honor the user's requested format and allow justified longer guides, SDKs, or setup requirements. An existing long README is not itself a reason to keep that length.
+
 ## Open with the point
 
 Make the first screen answer:
@@ -79,6 +81,12 @@ Honest boundaries build more trust than polished claims.
 
 The README should remain useful to agents because its facts are accurate, not because it talks to agents.
 
+## Keep updates from growing the README
+
+- Before adding a section, ask whether the primary reader needs it to understand, evaluate, or try the project. Otherwise use a short link to detailed docs. API reference, configuration catalogs, migration history, and milestone reports usually belong elsewhere.
+- After every README edit, reread the whole document, including unchanged sections. Do not simply append each new feature or verification result. Remove duplication and relocate detail that no longer serves the primary path.
+- Preserve essential prerequisites, safety warnings, maturity limits, and the working quickstart when shortening. Check moved links and heading anchors.
+
 ## Audit the result
 
 Before finishing, check:
@@ -92,5 +100,6 @@ Before finishing, check:
 - Internal agent instructions and duplicated docs are gone.
 - The voice sounds like the maintainers, not a corporate landing page or an AI summary.
 - The document is the shortest version that gets the reader from curiosity to success.
+- Count the final words and compare with the chosen target. If longer, shorten it or explain the reader need that justifies the extra detail.
 
-After editing, summarize the reader path you optimized and any facts that still need maintainer confirmation.
+After editing, report the primary reader, final word count, any justified length exception, and facts that still need maintainer confirmation.

@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/EftikharAzim/youtube-to-skill",
+  "commit": "cd51555a323961fc89fd328c4634854605f93943",
+  "installed_on": "2026-10-06",
+  "original_files": {
+    "scripts/extract_frames.py": "079f745ed7e232cca9c347befcebedba4c1fa4a2e0b0451563c853483670784c",
+    "scripts/fetch_transcript.py": "433f04a076fd01dce02c581c2abfa922107d3a0df12ef6d6f9a28b1ebadd159d",
+    "SKILL.md": "da1366f21d3137246be5514cc4d2e27346920c64c2fb3375194354349f546aa6"
+  },
+  "adaptations": [
+    "Windows UTF-8 and tool discovery",
+    "Summary-first Codex workflow",
+    "Caption language selection and failure metadata",
+    "Isolated work folders and accurate frame timestamps"
+  ]
+}

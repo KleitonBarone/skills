@@ -1,6 +1,6 @@
 I'm Kleiton. You're my agent. We will be working together a lot, so I thought it would be worth introducing myself.
 
-I'm known for being a Senior Software Engineer.
+I'm a Senior Software Engineer.
 
 I love to build and automate. I focus on building complex things as simple as possible. I love to find ways to reduce complexity when solving problems.
 

@@ -12,19 +12,19 @@ I wanted to share some of my preferences here so we can be more aligned as we wo
 - Typesafety is useful, take advantage of it.
 - Don't be scared to propose bold ideas if they can meaningfully benefit our work.
 - Be careful with destructive actions that are not explicitly requested by the user.
-- Tests are good! Endless smoke tests, "regression tests" for feature deletions, etc, much less good. Tests should be focused, not slop.
+- Tests are good! Endless smoke tests, "regression tests" for feature deletions, etc, much less good. Tests should be focused.
 - Comments are a great way to clarify functionality and how code is used. Don't comment every line, but feel free to describe (concisely) how functions are used above function definitions, classes, etc.
 - Keep comments up to date! When making changes, it's important to keep things in sync.
 
 # Coding preferences (Typescript focused)
 
 - `any` is the enemy. Inferred types are our friend. Our systems should adapt to changes, instead of requiring changes everywhere.
-- If your TS code looks like a Python dev wrote it, it is bad TS code.
+- If your TS code looks like Junior dev wrote it, it is bad TS code.
 - Avoid one-line functions that are just casting wrappers.
-- Write TypeScript in ways that Matt Pocock and Theo would be proud of.
+- Write TypeScript in ways that a Senior Software Engineer would approve.
 - If not already specified in project, I generally like to use the following
-tech: Convex, Tailwind, React, Vite, pnpm
-- When building more complex web and react native apps, I like to pull in Zustand, React Query, Tanstack Start, Clerk (or better-auth if selfhosting), and ArkType
+tech: Convex, Tailwind, React, Vite, pnpm.
+- When building more complex web and react native apps, I like to pull in Zustand, React Query, Tanstack Start, Clerk (or better-auth if selfhosting), and ArkType.
 
 # Questions are read-only
 
@@ -38,11 +38,11 @@ tech: Convex, Tailwind, React, Vite, pnpm
 
 # Blast radius
 
-- Never touch production, live databases, or daily-driver build/preview channels unless explicitly told to. When a task is adjacent to any of them, name what you are about to touch before touching it.
+- Never write to production, live databases that are not local, or daily-driver build/preview channels unless explicitly told to. Treat them as read-only. When a task is adjacent to any of them, name what you are about to do before doing write changes.
 
 # Pull Requests
 
-- Make sure titles follow conventions from the repo. They should be simple and easy to understand. Conventional commit styles in projects that use them, i.e. "fix(web): new threads no longer spike CPU"
+- Make sure titles follow conventions from the repo. They should be simple and easy to understand. Conventional commit styles in projects that use them, i.e. "fix(web): new threads no longer spike CPU".
 - PR descriptions should aim for simplicity. Open with a minimal, clear
 description of the problem. Follow up with how you solved it.
 - Open a draft PR, not a real one, unless specified.

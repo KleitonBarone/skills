@@ -80,5 +80,3 @@ Return:
 - The short commit hash and subject
 - The verification or hooks that ran
 - Any remaining staged or unstaged changes
-
-Do not push unless the user separately asks for it.

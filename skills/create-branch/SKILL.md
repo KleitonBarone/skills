@@ -5,7 +5,7 @@ description: Create and switch to a new local Git branch named for work already 
 
 # Create branch
 
-Create one local branch for the current work. A branch request authorizes creating and switching to that branch. It does not authorize committing, pushing, rebasing, updating the base branch, or opening a PR.
+Create one local branch for the current work. A branch request authorizes creating and switching to that branch.
 
 ## Read the request
 
@@ -81,8 +81,6 @@ After creation:
 3. Run `git status --short` again.
 4. Confirm the same staged, unstaged, and untracked work remains.
 
-Do not set an upstream or push the branch unless the user separately asks.
-
 ## Report
 
 Return:
@@ -90,4 +88,3 @@ Return:
 - The branch name
 - The previous branch and base commit
 - Whether uncommitted work remains
-- That the branch is local and has not been pushed

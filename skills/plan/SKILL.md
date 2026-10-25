@@ -1,5 +1,5 @@
 ---
-name: plan-project
+name: plan
 description: Create or update a start-to-finish software delivery plan from repository and handoff context, including milestones, proposed commits and PRs, reliable testing, cleanup, and completion gates. Use for planning implementation or recovering an unfinished delivery plan.
 ---
 

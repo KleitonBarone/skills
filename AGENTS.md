@@ -37,7 +37,7 @@ I wanted to share some of my preferences here so we can be more aligned as we wo
 
 # Blast radius
 
-- Never write to production, live databases that are not local, or daily-driver build/preview channels unless explicitly told to. Treat them as read-only. When a task is adjacent to any of them, name what you are about to do before doing write changes.
+- Never write to production, live databases that are not local, or daily-driver build/preview channels, unless explicitly told to. Treat them as read-only. When a task is adjacent to any of them, name what you are about to do before doing write changes.
 
 # Pull Requests
 
@@ -47,3 +47,13 @@ I wanted to share some of my preferences here so we can be more aligned as we wo
 - Merge onto latest main before opening. Stale branches conflict and waste a review round.
 - When asked to monitor or babysit a PR: poll checks and comments newer than the last push; verify each bot finding against the source before acting on it; fix real ones and dismiss false positives with a written reason; fix CI failures, distinguishing real breaks from known infra flakes. If nothing is new, stay quiet, do not post filler comments. Stop when the repo's review bots are green on the latest commit. If there are any human comments not resolved, don't answer them, just gather context and ask for my input.
 - Dont merge by yourself unless specified. If not specified, report and ask.
+
+# Special Commands
+
+## Full Send
+
+When i say 'full send' i mean you should make a plan for the intended changes, using the plan skill, and then executing the plan, to its completion, without stopping to ask me questions, if anything you are not confident in surfaces, implement in the best way you think it should, and then notify me at the end so that i know you did that decision.
+
+## Full Stop
+
+When i say 'full stop' means that i am uncertain about current progress or current status, so you should stop where you are at so we can align our ideas, using the 'grill-me' skill. once we are aligned again, i will say so or send 'full send' again so you can continue with our new alignment.

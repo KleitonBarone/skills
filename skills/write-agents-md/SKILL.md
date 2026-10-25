@@ -1,6 +1,6 @@
 ---
 name: write-agents-md
-description: Write or revise a repository's AGENTS.md as a concise, project-specific operating guide. Use when the user asks to create, audit, rewrite, or improve AGENTS.md, agent instructions, repository guidance, or coding-agent rules.
+description: Write or revise a repository's AGENTS.md as a concise, project-specific operating guide. Use when the user asks to create, audit, rewrite, or improve AGENTS.md, agent instructions, repository guidance, or coding-agent rules. Or when the agents needs to create or update a AGENTS.md file.
 ---
 
 # Write AGENTS.md

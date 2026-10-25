@@ -22,8 +22,7 @@ I wanted to share some of my preferences here so we can be more aligned as we wo
 - If your TS code looks like Junior dev wrote it, it is bad TS code.
 - Avoid one-line functions that are just casting wrappers.
 - Write TypeScript in ways that a Senior Software Engineer would approve.
-- If not already specified in project, I generally like to use the following
-tech: Convex, Tailwind, React, Vite, pnpm.
+- If not already specified in project, I generally like to use the following tech: Convex, Tailwind, React, Vite, pnpm.
 - When building more complex web and react native apps, I like to pull in Zustand, React Query, Tanstack Start, Clerk (or better-auth if selfhosting), and ArkType.
 
 # Questions are read-only
@@ -43,8 +42,7 @@ tech: Convex, Tailwind, React, Vite, pnpm.
 # Pull Requests
 
 - Make sure titles follow conventions from the repo. They should be simple and easy to understand. Conventional commit styles in projects that use them, i.e. "fix(web): new threads no longer spike CPU".
-- PR descriptions should aim for simplicity. Open with a minimal, clear
-description of the problem. Follow up with how you solved it.
+- PR descriptions should aim for simplicity. Open with a minimal, clear description of the problem. Follow up with how you solved it.
 - Open a draft PR, not a real one, unless specified.
 - Merge onto latest main before opening. Stale branches conflict and waste a review round.
 - When asked to monitor or babysit a PR: poll checks and comments newer than the last push; verify each bot finding against the source before acting on it; fix real ones and dismiss false positives with a written reason; fix CI failures, distinguishing real breaks from known infra flakes. If nothing is new, stay quiet, do not post filler comments. Stop when the repo's review bots are green on the latest commit. If there are any human comments not resolved, don't answer them, just gather context and ask for my input.

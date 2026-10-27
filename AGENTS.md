@@ -52,7 +52,34 @@ I wanted to share some of my preferences here so we can be more aligned as we wo
 
 ## Full Send
 
-When i say 'full send' i mean you should make a plan for the intended changes, using the plan skill, and then executing the plan, to its completion, without stopping to ask me questions, if anything you are not confident in surfaces, implement in the best way you think it should, and then notify me at the end so that i know you did that decision.
+When I say "full send", use the plan skill and execute the requested
+work through its final delivery. Make reasonable decisions without
+stopping for questions, and report consequential decisions afterward.
+
+Full Send explicitly authorizes creating branches, committing, pushing,
+opening PRs, fixing CI failures, marking PRs ready, merging, and deploying
+the requested change through the project's existing deployment pipeline.
+
+For this task, this overrides the separate "don't merge unless specified"
+rule and authorizes deployment to the intended production environment.
+Keep that authorization scoped to the requested work. It does not authorize
+unrelated changes, destructive data operations, or new paid infrastructure.
+
+For changes to a deployed application, completion requires:
+- The change is merged into the latest target branch.
+- Required checks and review gates pass.
+- The deployment finishes successfully.
+- The intended behavior is verified on the deployed application.
+
+Include these gates in the plan from the start. A draft PR, successful
+local build, or pending deployment is an intermediate state.
+
+Use available monitoring to resume work when checks or deployments finish.
+Do not report completion while a delivery gate remains pending.
+
+If a genuine blocker prevents completion, report what is blocked, what
+you tried, and exactly what remains. Never silently redefine the task
+to stop at an earlier milestone.
 
 ## Full Stop
 

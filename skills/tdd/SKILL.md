@@ -1,7 +1,6 @@
 ---
 name: tdd
 description: "Use when the user requests TDD, a failing test, or a regression test, or when a bug has a clear, inexpensive local test path."
-disable-model-invocation: true
 ---
 
 # TDD Bug Fix

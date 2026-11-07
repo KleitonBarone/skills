@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security review"
+  short_description: "Review designs and changes for concrete security risks"
+  default_prompt: "Use $security-review to review the specified design or code changes for concrete security risks without editing files."

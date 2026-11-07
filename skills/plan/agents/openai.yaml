@@ -1,4 +1,4 @@
 interface:
   display_name: "Plan"
-  short_description: "Plan projects through testing, cleanup, and merged PRs"
-  default_prompt: "Use $plan-project to load the project context and create a complete delivery plan, including proposed commits and PRs, reliable testing, cleanup, and completion gates."
+  short_description: "Plan delivery through testing, review, and completion gates"
+  default_prompt: "Use $plan to load project context and create a complete delivery plan, including commits, PRs, testing, code review, applicable security review, cleanup, and completion gates."

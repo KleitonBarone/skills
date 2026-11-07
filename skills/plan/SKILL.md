@@ -1,6 +1,6 @@
 ---
 name: plan
-description: Create or update a start-to-finish software delivery plan from repository and handoff context, including milestones, proposed commits and PRs, reliable testing, cleanup, and completion gates. Use for planning implementation or recovering an unfinished delivery plan.
+description: Create or update a start-to-finish software delivery plan from repository and handoff context, including milestones, proposed commits and PRs, testing, code and security reviews, cleanup, and completion gates. Use for planning implementation or recovering an unfinished delivery plan.
 ---
 
 # Plan a project through delivery
@@ -38,7 +38,7 @@ For each substantial delivery, record:
 - The behavior or capability it delivers and its bounded scope.
 - Dependencies, affected components, and relevant contracts.
 - Proposed commit subjects and, for PR workflows, the title, branch, and target following repository conventions.
-- Acceptance gates, concrete verification, and a short demonstration path.
+- Acceptance gates, concrete verification, review scope and gates, and a short demonstration path.
 - Data migration, rollback, or cleanup work where the change needs it.
 
 Keep commits cohesive and PRs reviewable. Leave room for fixes supported by actual failures or review findings. Planning labels such as D1 or PR A are proposed sequence labels, not real host-assigned PR numbers. Never invent commits, URLs, results, or merge timestamps.
@@ -65,9 +65,19 @@ Bound logs and diagnostics instead of accumulating artifacts per run. Prefer an 
 
 Scale this work to the project. A small static site does not need a general environment-management system.
 
+## Plan code and security review
+
+For each substantial code delivery, schedule [code-review](../code-review/SKILL.md) after focused verification and before merge or a direct push to the target branch. Schedule [security-review](../security-review/SKILL.md) when changes affect trust boundaries, permissions, untrusted input, secrets, sensitive data, or privileged execution. Include an early security design review when architecture decisions establish those boundaries, followed by implementation review when code exists. Scale review effort to the change.
+
+For planning-only requests, record these gates as future work. During authorized implementation, read and follow the linked skills when the corresponding gate is reached. A scheduled review is not a completed review.
+
+Record the review scope, comparison base, intended reviewer or mechanism, blocking criteria, and follow-up. Prefer an independent reviewer for substantial or sensitive work when available and permitted; identify self-review honestly. Existing repository reviews can satisfy a gate when their coverage matches its scope. Separate skills do not require separate agents.
+
+Verify findings against the source, resolve confirmed blockers, rerun affected checks, and review the fixes. Record the actual reviewed revision and included uncommitted changes; later changes require targeted rechecking. Bring material unresolved risks to the owner. Report a required review that could not run as an unmet gate.
+
 ## Close the Git delivery loop
 
-For a PR workflow, plan the complete sequence: synchronize with the latest target, make the scoped commits, push, open a draft PR, run checks on its latest head, handle review findings, mark it ready, and merge when authorized and its gates pass. Respect repository review rules and available host monitoring. Honor a user-selected direct-main workflow instead of forcing PRs.
+For a PR workflow, plan the complete sequence: synchronize with the latest target, make the scoped commits, push, open a draft PR, run checks and complete planned reviews on its latest head, handle confirmed findings and recheck fixes, mark it ready, and merge when authorized and its gates pass. Respect repository review rules and available host monitoring. Honor a user-selected direct-main workflow instead of forcing PRs.
 
 When actual merging is in scope, opening a PR or enabling auto-merge is insufficient. Verify the host reports it merged and the target contains the resulting merge or squash commit. Plan appropriate verification of the resulting target SHA. Deployment is a separate step with its own scope and authorization.
 

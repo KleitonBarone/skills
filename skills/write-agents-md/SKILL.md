@@ -11,7 +11,7 @@ Create a compact operating guide for agents working in a specific repository. De
 
 - Treat a request to review, explain, or suggest as read-only. Report findings and offer changes.
 - Treat a request to create, rewrite, or improve as permission to edit the requested `AGENTS.md` scope.
-- Preserve unrelated work and existing instructions. Resolve whether root and nested guidance files have different scopes before editing.
+- Preserve unrelated work and existing instructions. Identify root and nested scopes before editing and preserve intentional overrides. Resolve conflicts using applicable instruction precedence and flag unresolved ambiguity.
 
 ## Inspect before writing
 
@@ -60,6 +60,8 @@ Do not force this outline. A small app may need only product priorities, command
 
 Write in direct, plain language. Use memorable headings when they name a real problem. Explain the consequence behind a hard prohibition. Use "we" for maintainer intent and address the agent as "you" only when that makes an instruction clearer.
 
+Keep shared rules in `AGENTS.md`. Put detailed guidance needed only for specific tasks behind a link that states when to read it, for example: `Before changing authentication, read docs/auth.md.` Reuse existing documents where possible and verify the targets.
+
 ## Apply the decision rules
 
 - Favor the smallest model that makes correct behavior unsurprising.
@@ -86,7 +88,7 @@ Before finishing, check:
 - Each absolute rule reflects an explicit maintainer requirement, a concrete failure, or an enforced convention. Explicit requirements keep their original strength.
 - The file distinguishes user requests from actions the agent may take autonomously.
 - Verification matches the change's scope and cost.
-- The document has no contradictions with nested guidance or contributor docs.
+- Intentional overrides in nested scopes are preserved, and unresolved conflicts with other guidance or contributor docs are flagged.
 - Generic advice, duplicated README material, stale history, and speculative architecture are gone.
 - The file is the shortest version that would still prevent the repository's expensive mistakes.
 

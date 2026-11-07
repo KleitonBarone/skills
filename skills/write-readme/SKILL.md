@@ -7,7 +7,7 @@ description: Write or revise a project's README.md for human readers. Use when t
 
 Write the repository's front door for a human reader. Agents may use the README as context, but agent-only operating rules belong in `AGENTS.md`.
 
-Read [references/human-first-readmes.md](references/human-first-readmes.md) before drafting or revising a README.
+Read [references/human-first-readmes.md](references/human-first-readmes.md) when creating a README, substantially rewriting it, or changing its audience or structure.
 
 ## Choose the mode
 
@@ -42,6 +42,8 @@ Make the first screen answer:
 - What should they do next?
 
 Start with a concrete sentence, not a slogan assembled from adjectives. Put the shortest working install command, example, demo link, or next step close to the top.
+
+When including a quickstart, show how the reader can tell it worked, such as expected output, a local URL, or a created artifact.
 
 Use a logo, screenshot, badges, or centered HTML only when those assets help a human identify or trust the project. Do not add decorative badge walls.
 

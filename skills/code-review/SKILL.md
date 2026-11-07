@@ -5,7 +5,7 @@ description: Review a diff, commit range, pull request, or specified code for ac
 
 # Review code changes
 
-Find defects that matter to the requested behavior. Scale the review to the change and the repository's contracts.
+Find defects that matter to the requested behavior. Choose review depth by risk, affected contracts, and realistic exposure. A small diff can warrant deep review.
 
 ## Establish scope and authority
 
@@ -20,6 +20,10 @@ Report findings by default. Editing source or posting review comments requires a
 Read the full changed functions and enough callers, consumers, configuration, and tests to understand their contracts. Compare behavior before and after the change. Trace across affected clients and shared interfaces when a local change can break another entry point.
 
 Prioritize incorrect results, missing requirements, compatibility breaks, data loss, and relevant failure or concurrency paths. Check migrations, retries, cancellation, and partial failures when the change involves them. Report security defects encountered during code review; a separate security review can examine those boundaries in greater depth.
+
+Inspect changed hot paths for unbounded work, repeated database or network calls, and resource leaks. Tie findings to realistic workloads and concrete impact.
+
+When validation, authorization checks, or unusual workarounds change, inspect relevant Git history to understand their purpose and detect regressions.
 
 For a diff review, focus on defects introduced or newly exposed by the change. Keep unrelated existing issues outside the findings unless the user requested a broader review. Style preferences and speculative refactors need a concrete contract or enforced convention to justify a finding.
 

@@ -5,11 +5,13 @@ description: Review a proposed design or scoped code changes for concrete securi
 
 # Review security boundaries
 
-Find realistic abuse paths in the specified design or implementation. Focus on the assets and boundaries the work actually affects.
+Find realistic abuse paths in the specified design or implementation. Choose review depth by risk to affected assets and boundaries rather than diff size.
 
 ## Establish scope and mode
 
 Identify the target, applicable repository guidance, and security requirements. For changed code, resolve the comparison base and head revision. Include staged, unstaged, and relevant untracked changes only when the worktree is part of the requested scope. Review enough surrounding code and configuration to understand the affected controls. Expand to a repository-wide audit only when that scope is requested.
+
+For diff reviews, report vulnerabilities introduced or newly exposed by the change. Investigate surrounding code as needed; clearly separate incidental pre-existing issues from findings about the change.
 
 Choose the mode from the request and available artifacts:
 
@@ -22,7 +24,11 @@ Label design risks as design risks. Separate missing design decisions and unknow
 
 Identify who can act, what they control, which assets matter, and where trust or privilege changes. Include authenticated users acting outside their permitted resources or tenant, where relevant.
 
+Ground attacker capabilities and severity in the actual deployment and exposure. Use an existing threat model when available; state material assumptions when the context is unknown.
+
 Follow attacker-controlled input to sensitive operations or exposed data. Inspect the server-side checks, ownership decisions, validation, transformations, and execution context along that path. Verify whether existing controls prevent the suspected abuse before reporting it.
+
+When validation, authorization checks, or unusual workarounds change, inspect relevant Git history to understand their purpose and detect regressions.
 
 Select checks that match the change. These may involve authentication and session handling, authorization and tenant isolation, injection, file or network access, sensitive-data handling, resource exhaustion, or privileged CI and deployment workflows. For agent features, include untrusted instructions reaching tools or private data. Avoid applying an unrelated checklist to every project.
 

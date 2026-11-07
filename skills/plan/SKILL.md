@@ -67,7 +67,7 @@ Scale this work to the project. A small static site does not need a general envi
 
 ## Plan code and security review
 
-For each substantial code delivery, schedule [code-review](../code-review/SKILL.md) after focused verification and before merge or a direct push to the target branch. Schedule [security-review](../security-review/SKILL.md) when changes affect trust boundaries, permissions, untrusted input, secrets, sensitive data, or privileged execution. Include an early security design review when architecture decisions establish those boundaries, followed by implementation review when code exists. Scale review effort to the change.
+For substantial code deliveries and small changes with significant risk, schedule [code-review](../code-review/SKILL.md) after focused verification and before merge or a direct push to the target branch. Schedule [security-review](../security-review/SKILL.md) when changes affect trust boundaries, permissions, untrusted input, secrets, sensitive data, or privileged execution. Include an early security design review when architecture decisions establish those boundaries, followed by implementation review when code exists. Choose review depth by risk, exposure, and affected contracts rather than diff size.
 
 For planning-only requests, record these gates as future work. During authorized implementation, read and follow the linked skills when the corresponding gate is reached. A scheduled review is not a completed review.
 

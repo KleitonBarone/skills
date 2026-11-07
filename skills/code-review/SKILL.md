@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: Review a diff, commit range, pull request, or specified code for actionable correctness issues and regressions. Use when asked for code review or when an authorized delivery reaches its planned code review gate. Report findings by default.
+description: "Use when asked to review code, a diff, a commit range, or a pull request, or when a planned code review gate is reached."
 ---
 
 # Review code changes

@@ -1,6 +1,6 @@
 ---
 name: docker-wsl
-description: Run Docker and Compose on Kleiton's Windows machine through WSL Ubuntu, with cleanup of task-owned temporary resources. Use whenever a task on this machine needs Docker, including when the Windows docker command is missing.
+description: "Use whenever a task needs Docker or Compose on Kleiton's Windows machine, including when the Windows Docker command is unavailable."
 ---
 
 # Docker through WSL

@@ -1,6 +1,6 @@
 ---
 name: commit
-description: Create a focused local Git commit from the changes that belong to the user's request. Use when the user asks to commit, make a commit, save changes in Git, or prepare a commit.
+description: "Use when asked to create or prepare a local Git commit for the current work."
 ---
 
 # Commit

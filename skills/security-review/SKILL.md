@@ -1,6 +1,6 @@
 ---
 name: security-review
-description: Review a proposed design or scoped code changes for concrete security risks. Use when asked for a security review or when an authorized delivery reaches a security review gate involving relevant trust boundaries. Report findings by default; broader audits need an explicit scope.
+description: "Use when asked to review the security of a design or code, or when a planned security review gate is reached."
 ---
 
 # Review security boundaries

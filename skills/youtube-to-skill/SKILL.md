@@ -1,6 +1,6 @@
 ---
 name: youtube-to-skill
-description: Summarize or answer questions about YouTube videos and playlists using timestamped captions and relevant video frames. Use when given a YouTube URL, asked to find videos on a topic, or explicitly asked to turn video material into a reusable knowledge skill.
+description: "Use when given a YouTube video or playlist URL, asked to find YouTube videos, or asked to turn video material into a reusable skill."
 ---
 
 # YouTube captions and visuals

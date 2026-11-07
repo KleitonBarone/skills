@@ -1,6 +1,6 @@
 ---
 name: write-readme
-description: Write or revise a project's README.md for human readers. Use when the user asks to create, rewrite, audit, or improve a README, repository landing page, setup guide, project overview, or contributor-facing introduction.
+description: "Use when creating, reviewing, or updating a project's README or human-facing repository introduction."
 ---
 
 # Write README

@@ -1,6 +1,6 @@
 ---
 name: create-branch
-description: Create and switch to a new local Git branch named for work already in progress. Use when the user asks to create, start, or make a branch for the current changes or task.
+description: "Use when asked to create and switch to a new local Git branch for the current work."
 ---
 
 # Create branch

@@ -18,17 +18,19 @@ Read [references/human-first-readmes.md](references/human-first-readmes.md) befo
 
 ## Inspect the project
 
-Read enough of the repository to write facts instead of guesses:
+Scale inspection to the request. For a focused edit, read the README, applicable guidance, and sources needed to verify the change. Expand only when related claims or contradictions require it. For a new README or full rewrite, inspect the following as relevant:
 
 1. Read the existing README and nearby documentation.
 2. Read package manifests, workspace files, CLI help, example apps, and entry points.
 3. Check the project website, package metadata, release links, screenshots, license, and contribution guide when they exist.
 4. Read `AGENTS.md` and contributor guidance so the README does not absorb internal operating rules.
-5. Verify every command, version requirement, path, and link before publishing it.
+5. Verify commands, version requirements, paths, and links you add or change.
+
+Check command definitions and prerequisites first. Run commands only when safe, relevant, and authorized. Distinguish source inspection from execution and disclose anything unverified.
 
 Identify the primary reader and the decision they came to make. They may be evaluating the project, trying it for the first time, integrating a package, learning an approach, or considering a contribution. Pick one primary path. Do not make every audience equally prominent.
 
-Choose a length target before drafting. For an ordinary app or tool, default to roughly 400 to 600 words; smaller utilities may need less. This is a planning target, not a universal cap. Honor the user's requested format and allow justified longer guides, SDKs, or setup requirements. An existing long README is not itself a reason to keep that length.
+Choose a length target for a new README or full rewrite. For an ordinary app or tool, default to roughly 400 to 600 words; smaller utilities may need less. This is a planning target, not a universal cap. Honor the user's requested format and allow justified longer guides, SDKs, or setup requirements. An existing long README is not itself a reason to keep that length.
 
 ## Open with the point
 
@@ -93,13 +95,13 @@ Before finishing, check:
 
 - The opening explains the project without relying on badges or branding.
 - The primary reader has an obvious next action.
-- Commands and examples work against the current repository.
+- Commands and examples match current repository sources, with any unverified behavior disclosed.
 - Claims are concrete and supportable. Remove invented scale, speed, popularity, and compatibility claims.
 - Links point to the canonical current destination.
 - The README names important limits and prerequisites.
 - Internal agent instructions and duplicated docs are gone.
 - The voice sounds like the maintainers, not a corporate landing page or an AI summary.
 - The document is the shortest version that gets the reader from curiosity to success.
-- Count the final words and compare with the chosen target. If longer, shorten it or explain the reader need that justifies the extra detail.
+- For a new README or full rewrite, count the final words and compare with the chosen target. If longer, shorten it or identify the reader need that justifies the extra detail.
 
-After editing, report the primary reader, final word count, any justified length exception, and facts that still need maintainer confirmation.
+After editing, summarize the changes and facts that still need maintainer confirmation. For a new README or full rewrite, identify the primary reader. Report word count and length exceptions only when requested or length is part of the task.

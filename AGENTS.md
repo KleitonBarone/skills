@@ -19,9 +19,7 @@ I wanted to share some of my preferences here so we can be more aligned as we wo
 # Coding preferences (Typescript focused)
 
 - `any` is the enemy. Inferred types are our friend. Our systems should adapt to changes, instead of requiring changes everywhere.
-- If your TS code looks like Junior dev wrote it, it is bad TS code.
 - Avoid one-line functions that are just casting wrappers.
-- Write TypeScript in ways that a Senior Software Engineer would approve.
 - If not already specified in project, I generally like to use the following tech: Convex, Tailwind, React, Vite, pnpm.
 - When building more complex web and react native apps, I like to pull in Zustand, React Query, Tanstack Start, Clerk (or better-auth if selfhosting), and ArkType.
 
@@ -45,41 +43,24 @@ I wanted to share some of my preferences here so we can be more aligned as we wo
 - PR descriptions should aim for simplicity. Open with a minimal, clear description of the problem. Follow up with how you solved it.
 - Open a draft PR, not a real one, unless specified.
 - Merge onto latest main before opening. Stale branches conflict and waste a review round.
-- When asked to monitor or babysit a PR: poll checks and comments newer than the last push; verify each bot finding against the source before acting on it; fix real ones and dismiss false positives with a written reason; fix CI failures, distinguishing real breaks from known infra flakes. If nothing is new, stay quiet, do not post filler comments. Stop when the repo's review bots are green on the latest commit. If there are any human comments not resolved, don't answer them, just gather context and ask for my input.
+- When asked to monitor or babysit a PR, use the `babysit-pr` skill.
 - Dont merge by yourself unless specified. If not specified, report and ask.
 
 # Special Commands
 
 ## Full Send
 
-When I say "full send", use the plan skill and execute the requested
-work through its final delivery. Make reasonable decisions without
-stopping for questions, and report consequential decisions afterward.
+When I say "full send", use the `plan` skill and deliver the requested work end to end. Make reasonable decisions without stopping for questions, and report consequential decisions afterward.
 
-Full Send explicitly authorizes creating branches, committing, pushing,
-opening PRs, fixing CI failures, marking PRs ready, merging, and deploying
-the requested change through the project's existing deployment pipeline.
+This authorizes creating branches, committing, pushing, opening PRs, fixing CI failures, marking PRs ready, merging, and deploying to the intended production environment through the project's existing pipeline. It overrides the default merge restriction and covers only the requested work, excluding unrelated changes, destructive data operations, and new paid infrastructure.
 
-For this task, this overrides the separate "don't merge unless specified"
-rule and authorizes deployment to the intended production environment.
-Keep that authorization scoped to the requested work. It does not authorize
-unrelated changes, destructive data operations, or new paid infrastructure.
+For deployed applications, include these completion gates in the plan from the start:
+- Merge into the latest target branch.
+- Pass required checks and review gates.
+- Complete deployment successfully.
+- Verify the intended behavior on the deployed application.
 
-For changes to a deployed application, completion requires:
-- The change is merged into the latest target branch.
-- Required checks and review gates pass.
-- The deployment finishes successfully.
-- The intended behavior is verified on the deployed application.
-
-Include these gates in the plan from the start. A draft PR, successful
-local build, or pending deployment is an intermediate state.
-
-Use available monitoring to resume work when checks or deployments finish.
-Do not report completion while a delivery gate remains pending.
-
-If a genuine blocker prevents completion, report what is blocked, what
-you tried, and exactly what remains. Never silently redefine the task
-to stop at an earlier milestone.
+Use available monitoring to resume when checks or deployments finish. Do not report completion while a gate is pending. A draft PR, local build, or pending deployment is an intermediate state. If blocked, report the blocker, what you tried, and exactly what remains. Never redefine completion to stop at an earlier milestone.
 
 ## Full Stop
 

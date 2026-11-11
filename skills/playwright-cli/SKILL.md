@@ -1,6 +1,6 @@
 ---
 name: playwright-cli
-description: Use when a task requires browser navigation, clicking or filling UI controls, inspecting rendered page state, capturing screenshots, verifying local web apps, or running and debugging Playwright tests.
+description: Use when writing or running planned browser scripts, automating repeated browser workflows, or running and debugging Playwright tests.
 allowed-tools: Bash(playwright-cli:*) Bash(npx playwright:*) Bash(npx --no-install playwright:*)
 ---
 
@@ -12,7 +12,8 @@ allowed-tools: Bash(playwright-cli:*) Bash(npx playwright:*) Bash(npx --no-insta
 
 These defaults take precedence over the generic examples below.
 
-- Use the globally installed `playwright-cli` from PowerShell for routine browser automation. Chrome is installed on this machine.
+- Use the globally installed `playwright-cli` from PowerShell. Chrome is installed on this machine.
+- Batch known action sequences in a single `run-code` invocation when possible to avoid starting the CLI for each action.
 - Launch a fresh Chrome session with `playwright-cli -s=<repo>-<task> open <url> --browser=chrome`. Headless, in-memory sessions are the default. Add `--headed` when the user wants to see the browser.
 - Choose a distinct session name for each repository and task, reuse it on every command, and close only that session when finished. Avoid `close-all` and `kill-all`, which can interrupt other work.
 - Launch browsers with `open`. Do not use extension attachment, attach to the user's existing browser, or reuse their personal Chrome profile unless explicitly requested.

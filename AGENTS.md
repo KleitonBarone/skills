@@ -26,9 +26,9 @@ I wanted to share some of my preferences here so we can be more aligned as we wo
 
 # Browser tools
 
-- Use Playwright CLI and the `playwright-cli` skill by default for routine browser automation and development checks.
+- Prefer Chrome DevTools MCP when available for interactive browser work, including navigation, page inspection, screenshots, and development checks. Use it for network and console debugging and performance investigations.
+- Use Playwright CLI and the `playwright-cli` skill for planned browser scripts, repeated automation, and running or debugging Playwright tests. Also use it when Chrome DevTools MCP is unavailable.
 - Use T3 browser preview when I explicitly request it.
-- Prefer Chrome DevTools MCP for detailed network inspection, debugging, and performance investigations when available.
 
 # Questions are read-only
 

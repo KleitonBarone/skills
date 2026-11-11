@@ -23,6 +23,12 @@ I wanted to share some of my preferences here so we can be more aligned as we wo
 - If not already specified in project, I generally like to use the following tech: Convex, Tailwind, React, Vite, pnpm.
 - When building more complex web and react native apps, I like to pull in Zustand, React Query, Tanstack Start, Clerk (or better-auth if selfhosting), and ArkType.
 
+# Browser tools
+
+- Use Playwright CLI and the `playwright-cli` skill by default for routine browser automation and development checks.
+- Use T3 browser preview when I explicitly request it.
+- Prefer Chrome DevTools MCP for detailed network inspection, debugging, and performance investigations when available.
+
 # Questions are read-only
 
 - A question is a request for an answer, not for changes. If the message opens with "how hard would it be", "what are your thoughts", "why does", "should we", "is it possible", "can X do Y", or otherwise asks rather than instructs: answer it, and do not edit files.

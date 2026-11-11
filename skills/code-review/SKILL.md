@@ -1,11 +1,11 @@
 ---
 name: code-review
-description: "Use when asked to review code, a diff, a commit range, or a pull request, or when a planned code review gate is reached."
+description: "Use when asked to review code, a diff, a commit range, or a pull request, assess code readability or maintainability, or when a planned code review gate is reached."
 ---
 
 # Review code changes
 
-Find defects that matter to the requested behavior. Choose review depth by risk, affected contracts, and realistic exposure. A small diff can warrant deep review.
+Check correctness, readability, and maintainability in every review. Prioritize defects that matter to the requested behavior. Choose review depth by risk, affected contracts, and realistic exposure. A small diff can warrant deep review.
 
 ## Establish scope and authority
 
@@ -25,11 +25,22 @@ Inspect changed hot paths for unbounded work, repeated database or network calls
 
 When validation, authorization checks, or unusual workarounds change, inspect relevant Git history to understand their purpose and detect regressions.
 
-For a diff review, focus on defects introduced or newly exposed by the change. Keep unrelated existing issues outside the findings unless the user requested a broader review. Style preferences and speculative refactors need a concrete contract or enforced convention to justify a finding.
+For a diff review, focus on problems introduced or newly exposed by the change. Keep unrelated existing issues outside the findings unless the user requested a broader review. Report readability or maintenance concerns when you can identify a concrete difficulty in understanding or changing the code. Keep personal style preferences and speculative refactors outside the findings.
+
+## Check readability and maintainability
+
+Read the code as someone unfamiliar with the implementation. Check whether its behavior is clear on the first read:
+
+- Names should communicate what values, functions, components, and states mean. Flag misleading names and ambiguous flags.
+- Control flow and data flow should be easy to trace. Look for tangled branching, dense expressions, hidden side effects, and assumptions scattered across callers.
+- Functions and components should have coherent responsibilities. Check whether abstractions clarify the behavior or add indirection, and whether duplication makes related changes easy to miss.
+- Comments should explain constraints and non-obvious decisions and match the current behavior. Identify missing explanations when their absence could lead to a future mistake.
+
+For each concern, identify what the reader must infer and suggest a focused simplification. Respect repository conventions and keep complexity proportional to the task. Avoid extra layers, files, or arbitrary function-length limits.
 
 ## Verify suspected findings
 
-Identify a triggering input or state, trace the failure, and establish its impact. Check callers, guards, types, and tests for controls that invalidate the concern. Verify bot or earlier reviewer claims against the current source before repeating them.
+For behavioral findings, identify a triggering input or state, trace the failure, and establish its impact. For readability or maintainability findings, use specific source examples to establish the difficulty and explain how the proposed change improves understanding or future edits. Check callers, guards, types, and tests for controls that invalidate the concern. Verify bot or earlier reviewer claims against the current source before repeating them.
 
 Use focused existing checks or disposable local reproductions when they resolve uncertainty. Run only relevant checks within authorized local or test environments. Source evidence may be sufficient; distinguish inspected behavior from executed checks. Missing setup or unavailable checks belong in review limitations.
 
@@ -39,10 +50,10 @@ Use the repository's severity scheme, or critical, high, medium, and low based o
 
 - Severity and a short title.
 - Location, using a file and line or a named section.
-- Triggering scenario and impact.
+- Triggering scenario and impact, or the specific reading or maintenance difficulty.
 - Supporting evidence and material assumptions.
 - A focused fix direction when useful.
 
 Order findings by severity and consolidate reports of the same root cause. Separate unresolved questions from supported defects. Return no findings when none are supported; do not invent issues to fill a quota.
 
-Finish with the reviewed scope, reviewer independence, checks performed, and material gaps. If reviewing fixes, inspect the fixes and affected paths. Broaden the review only when new changes or evidence justify it.
+Include a brief readability and maintainability assessment even when there are no actionable findings. Finish with the reviewed scope, reviewer independence, checks performed, and material gaps. If reviewing fixes, inspect the fixes and affected paths. Broaden the review only when new changes or evidence justify it.

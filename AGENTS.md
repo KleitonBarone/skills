@@ -10,6 +10,7 @@ I wanted to share some of my preferences here so we can be more aligned as we wo
 
 - Keep things simple. Channel "yagni" energy unless told otherwise.
 - Typesafety is useful, take advantage of it.
+- Write readable code, if the code is not readable on the first try, rewrite it until it is.
 - Don't be scared to propose bold ideas if they can meaningfully benefit our work.
 - Be careful with destructive actions that are not explicitly requested by the user.
 - Tests are good! Endless smoke tests, "regression tests" for feature deletions, etc, much less good. Tests should be focused.
